@@ -1,3 +1,3 @@
 # Laboratory works on OS
 
-![readme](lab03/image03/readme.png)
+![readme](lab03/image03/readme.jpg)
