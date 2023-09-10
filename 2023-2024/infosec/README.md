@@ -1,3 +1,5 @@
-# Laboratory works on Fundamentals of information security
+# Лабораторные работы по Основам информационной безопасности
 
-# YouTube: [click](https://youtube.com/playlist?list=PL5YxDPVuMbM68JoJV_7VY-4KiQiSqZlvS&si=rPrkpeUwIc9Y1591)
+# YouTube: [тык](https://www.youtube.com/playlist?list=PL5YxDPVuMbM68JoJV_7VY-4KiQiSqZlvS)
+
+![readme](readme.jpg)
