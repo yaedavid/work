@@ -1,5 +1,5 @@
 # Лабораторные работы по Операционным системам
 
-# YouTube: [тык](https://youtu.be/uqfwDugsWF0?si=pHt3SoR6fKjwTwVM)
+# YouTube: [тык](https://www.youtube.com/playlist?list=PL0NzR1_rM_SF1ECaM9aBD_YRTUczFx2wN)
 
-![readme](readme.jpeg)
+![readme](readme.jpg)
