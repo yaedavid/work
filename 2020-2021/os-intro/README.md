@@ -1,5 +1,5 @@
-# Laboratory works on OS
+# Лабораторные работы по Операционным системам
 
-# YouTube: https://www.youtube.com/playlist?list=PL0NzR1_rM_SF1ECaM9aBD_YRTUczFx2wN
+# YouTube: [тык] (https://youtu.be/uqfwDugsWF0?si=pHt3SoR6fKjwTwVM)
 
-![readme](laboratory/lab03/report03/image03/readme.jpg)
+![readme](readme.jpg)
