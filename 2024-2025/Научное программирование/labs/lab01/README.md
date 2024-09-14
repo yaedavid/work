@@ -3,7 +3,7 @@
 ## Подготовка презентации 1: [rutube](https://rutube.ru/video/private/ccd19f8a36c71bcf8556a26d2d88ab71/?p=LcTjR1lZOQflWmDx5cthbg)
 ## Защита презентации 1: [rutube](https://rutube.ru/video/private/6e6d064b4606369cd48bc0f3ba8dffe2/?p=X_gDQNUyLmqUxdP88kEt_Q)
 
-## Лабораторная работа 1: [платформа]()
-## Подготовка отчёта 1: [платформа]()
-## Подготовка презентации 1: [платформа]()
-## Защита презентации 1: [платформа]()
+## Лабораторная работа 1: [платформа](https://plvideo.ru/watch?v=dnWnYNsbMnrK)
+## Подготовка отчёта 1: [платформа](https://plvideo.ru/watch?v=xwYae6B05dfy)
+## Подготовка презентации 1: [платформа](https://plvideo.ru/watch?v=bcemF4kUPAyM)
+## Защита презентации 1: [платформа](https://plvideo.ru/watch?v=_MVLtIVvQhFL)
