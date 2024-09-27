@@ -4,6 +4,6 @@
 ## Защита презентации 2: [rutube](https://rutube.ru/video/private/332b900c3010b101ab27710559686d10/?p=NtrgAIv09H2q4_a01KNkbA)
 
 ## Лабораторная работа 2: [платформа](https://plvideo.ru/watch?v=yf4vXm2weA1w)
-## Подготовка отчёта 2: [платформа](https://plvideo.ru/watch?v=0qXp1QTO8eC7)
-## Подготовка презентации 2: [платформа](https://plvideo.ru/watch?v=U8gd6m41dKXL)
-## Защита презентации 2: [платформа](https://plvideo.ru/watch?v=6JTPt8-X2Lbr)
+## Подготовка отчёта 2: [платформа](https://plvideo.ru/watch?v=y3oXFVWy4zht)
+## Подготовка презентации 2: [платформа](https://plvideo.ru/watch?v=8h6Ld0qbz_Zx)
+## Защита презентации 2: [платформа](https://plvideo.ru/watch?v=FDFYEZhNPOuy)
