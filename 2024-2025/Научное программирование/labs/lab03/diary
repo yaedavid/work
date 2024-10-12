@@ -1,0 +1,174 @@
+octave:2> 2*6+(7-4)^2
+ans = 21
+octave:3> u = [1 -4 6]
+u =
+
+   1  -4   6
+
+octave:4> u = [1; -4; 6]
+u =
+
+   1
+  -4
+   6
+
+octave:5> A = [1 2 -3; 2 4 0; 1 1 1]
+A =
+
+   1   2  -3
+   2   4   0
+   1   1   1
+
+octave:6> u = [1; -4; 6]
+u =
+
+   1
+  -4
+   6
+
+octave:7> v = [2; 1; -1]
+v =
+
+   2
+   1
+  -1
+
+octave:8> 2*v + 3*u
+ans =
+
+    7
+  -10
+   16
+
+octave:9> dot(u, v)
+ans = -8
+octave:10> cross(u, v)
+ans =
+
+   -2
+   13
+    9
+
+octave:11> norm(u)
+ans = 7.2801
+octave:12> u = [3 5]
+u =
+
+   3   5
+
+octave:13> v = [7 2]
+v =
+
+   7   2
+
+octave:14> proj = dot(u, v)/(norm(v))^2 * v
+proj =
+
+   4.0943   1.1698
+
+octave:15> A = [1 2 -3; 2 4 0; 1 1 1]
+A =
+
+   1   2  -3
+   2   4   0
+   1   1   1
+
+octave:16> B = [1 2 3 4; 0 -2 -4 6; 1 -1 0 0]
+B =
+
+   1   2   3   4
+   0  -2  -4   6
+   1  -1   0   0
+
+octave:17> A * B
+ans =
+
+   -2    1   -5   16
+    2   -4  -10   32
+    2   -1   -1   10
+
+octave:18> 2 * A = 4 * eye(3)
+error: parse error:
+
+  invalid left hand side of assignment
+
+>>> 2 * A = 4 * eye(3)
+          ^
+octave:18> 2 * A - 4 * eye(3)
+ans =
+
+  -2   4  -6
+   4   4   0
+   2   2  -2
+
+octave:19> eye(3)
+ans =
+
+Diagonal Matrix
+
+   1   0   0
+   0   1   0
+   0   0   1
+
+octave:20> det(A)
+ans = 6
+octave:21> inv(A)
+ans =
+
+   0.6667  -0.8333   2.0000
+  -0.3333   0.6667  -1.0000
+  -0.3333   0.1667        0
+
+octave:22> eig(A)
+ans =
+
+   4.5251 +      0i
+   0.7374 + 0.8844i
+   0.7374 - 0.8844i
+
+octave:23> rank(A)
+ans = 3
+octave:24> x = linspace(0, 2*pi, 50);
+octave:25> y = sin (x);
+octave:26> plot (x, y);
+octave:27> clf
+octave:28> plot (x, y, 'r', 'linewidth', 3)
+octave:29> axis([0 2*pi -1 1])
+octave:30> grid on
+octave:31> xlabel('x')
+octave:32> ylabel('y')
+octave:33> title ('Sine graph');
+octave:34> legend ('y=sin(x)');
+octave:35> clear
+octave:36> clf
+octave:37> x = [1 2 3 4]
+x =
+
+   1   2   3   4
+
+octave:38> y = [1 2 5 4]
+y =
+
+   1   2   5   4
+
+octave:39> plot (x, y, 'o')
+octave:40> hold on
+octave:41> plot (x, 1.2*x)
+octave:42> grid on
+octave:43> axis([0 5 0 6]);
+octave:44> legend ('data points', 'regressionline');
+octave:45> clear
+octave:46> clf
+octave:47> x = linspace (-10, 10, 100);
+octave:48> plot (x, x^2*sin(x))
+error: for x^y, only square matrix arguments are permitted and one argument must be scalar.  Use .^ for elementwise power.
+octave:49> plot (x, x.^2.*sin(x))
+octave:50> print graph2.png -dpng
+octave:51> print ('graph2.pdf', '-dpdf')
+octave:52> clear
+octave:53> clf
+octave:54> loop_for
+Elapsed time is 0.0849259 seconds.
+octave:55> loop_vec
+Elapsed time is 0.000769854 seconds.
+octave:56> diary off
