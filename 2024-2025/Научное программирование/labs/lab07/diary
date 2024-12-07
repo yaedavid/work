@@ -1,0 +1,99 @@
+octave:2> t = linspace (0,6*pi,50);
+octave:3> r = 2;
+octave:4> x = r*(t-sin(t));
+octave:5> y = r*(1-cos(t));
+octave:6> plot (x,y)
+octave:7> axis('equal');
+octave:8> axis([0 12*pi 0 4])
+octave:9> savefig cycloid.pdf
+octave:10> print -dpdf cycloid.pdf
+octave:11> print -dpng cycloid.png
+octave:12> theta = linspace (0,2*pi,100);
+octave:13> r = 1-2*sin(theta);
+octave:14> x = r.*cos(theta);
+octave:15> y = r.*sin(theta);
+octave:16> plot (x,y)
+octave:17> print -dpdf limacon.pdf
+octave:18> print -dpng limacon.png
+octave:19> theta = linspace (0,2*pi,50);
+octave:20> r = 1-2*sin(theta);
+octave:21> polar(theta,r)
+octave:22> print -dpdf limacon-polar.pdf
+octave:23> print -dpng limacon-polar.png
+octave:24> f = @(x,y) -x.^2-x.*y+y.^2-y-1
+f =
+
+@(x, y) -x .^ 2 - x .* y + y .^ 2 - y - 1
+
+octave:25> ezplot(f)
+octave:26> print -dpdf impl1\.pdf
+octave:27> f = @(x,y) (x-2).^2+y.^2-25;
+octave:28> ezlot(f, [-6 10 -8 8])
+error: 'ezlot' undefined near line 1, column 1
+octave:29> ezplot(f, [-6 10 -8 8])
+octave:30> x = [-6:10];
+octave:31> y = 3/4*x+19/4;
+octave:32> hold on
+octave:33> plot(x,y,'r--')
+octave:34> print -dpdf impl2.pdf
+octave:35> z1=1+2*i;
+octave:36> z2=2-3*i;
+octave:37> z1+z2
+ans =  3 - 1i
+octave:38> z1-z2
+ans = -1 + 5i
+octave:39> z1*z2
+ans =  8 + 1i
+octave:40> z1/z2
+ans = -0.3077 + 0.5385i
+octave:41> clf
+octave:42> z1 = 1+2*i;
+octave:43> z2 = 2-3*i;
+octave:44> compass(z1,'b')
+octave:45> compass(z1,'b')
+octave:46> hold on
+octave:47> compass(z2,'r')
+octave:48> compass(z1+z2,'k--')
+octave:49> legend('z_1','z_2','z_1+z_2')
+octave:50> print -dpdf complex.pdf
+octave:51> (-8)^(1/3)
+ans =  1.0000 + 1.7321i
+octave:52> ans^3
+ans = -8.0000e+00 + 2.2204e-15i
+octave:53> nthroot(-8,3)
+ans = -2
+octave:54> n=[0:1:5];
+octave:55> x = linspace(-5,5,500);
+octave:56> plot(n,factorial(n),'*',x,gamma(x+1))
+octave:57> clf
+octave:58> plot(n,factorial(n),'*',x,gamma(x+1))
+octave:59> axis([-5 6 -10 25]);
+octave:60> grid on;
+octave:61> legend('n!','gamma(n+1)')
+octave:62> print -dpdf gamma.pdf
+octave:63> clf
+octave:64> x1 = linspace(-5,-4,-500);
+octave:65> clf
+octave:66> x1 = linspace(-5,-4,500);
+octave:67> x2 = linspace(-4,-3,500);
+octave:68> x3 = linspace(-3,-2,500);
+octave:69> x4 = linspace(-2,-1,500);
+octave:70> x5 = linspace(-1,5,500);
+octave:71> plot(x1,gamma(x1+1))
+octave:72> hold on
+octave:73> plot(x2,gamma(x2+1))
+octave:74> plot(x3,gamma(x3+1))
+octave:75> plot(x4,gamma(x4+1))
+octave:76> plot(x5,gamma(x5+1))
+octave:77> axis([-5 6 -10 25]);
+octave:78> plot(n,factorial(n),'*')
+octave:79> legend('n!','\\Gamma(n+1)
+error: parse error:
+
+  syntax error
+
+>>> legend('n!','\\Gamma(n+1)
+                            ^
+octave:79> legend('n!',"\\Gamma(n+1)")
+octave:80> print -dpdf gamma2.pdf
+octave:81> diary off
