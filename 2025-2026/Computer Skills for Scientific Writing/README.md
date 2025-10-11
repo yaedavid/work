@@ -4,4 +4,4 @@
 # VKvideo: [тык]()
 # Платформа: [тык]()
 
-![readme](readme.jpg)
+![readme](readme.png)
