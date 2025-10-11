@@ -1,8 +1,8 @@
 ---
 # Front matter
 lang: ru-RU
-title: "Лабораторная работа №1"
-subtitle: "Дисциплина: Математические основы защиты информации и информационной безопасности"
+title: "Лабораторная работа №3"
+subtitle: "Дисциплина: Computer Skills for Scientific Writing"
 author: "Аветисян Давид Артурович"
 
 # Formatting
