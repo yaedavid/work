@@ -1,7 +1,7 @@
 ---
 # Front matter
 lang: ru-RU
-title: "Лабораторная работа №3"
+title: "Лабораторная работа №4"
 subtitle: "Дисциплина: Computer Skills for Scientific Writing"
 author: "Аветисян Давид Артурович"
 
@@ -48,119 +48,87 @@ header-includes:
 
 # Цель работы
 
-This lesson presents LaTeX’s math mode and how you can type inline and display formulas, the extensions provided by the amsmath package, and how to change fonts in math.
+Изучить возможности вставки, изменения и размещения графических изображений в LaTeX, а также освоить работу с плавающими объектами, подписями и перекрёстными ссылками.
 
 # Задание
 
-1. Math mode.
-2. Display mathematics.
-3. The amsmath package.
-4. Fonts in math mode.
-5. Further amsmath alignments.
-6. Bold Math.
-7. Mathtools.
-8. Unicode Math.
+1. Including Graphics.
+2. Altering graphic appearance.
+3. Making images float.
+4. Placing floats.
+5. Other types of float.
+6. Cross-referencing.
+7. Making cross-references into links.
 
 # Выполнение лабораторной работы
 
-### Math mode.
+### Including Graphics.
 
-В данном разделе показано использование **математического режима**:
+Чтобы добавить графику из внешнего источника в LaTeX, используем пакет **graphics** и команду **\\includegraphics**.
 
-- встроенный (inline) режим используется для коротких формул в тексте и обозначается \$...\$
-- выведенный (display) режим обозначается \\[...\\] и размещает формулу по центру на отдельной строке
-- используются верхние (^) и нижние (_) индексы, а также стандартные функции (\\sin, \\theta)
+![graph.tex](image04/image_01.png){ width=70% }
 
-![math.tex](image03/image_01.png){ width=70% }
+![graph.pdf](image04/image_02.png){ width=70% }
 
-![math.pdf](image03/image_02.png){ width=70% }
+### Altering graphic appearance.
 
-### Display mathematics.
+Команда **\\includegraphics** имеет множество параметров для управления размером и формой включаемых изображений, а также для обрезки материала. Ширину и высоту задавали командами **\\textwidth** и **\\textheight**. Обрезали параметрами **clip, trim**.
 
-В данном разделе показано использование **интегралов** и **нумерованных уравнений**:
+![graph2.tex](image04/image_03.png){ width=70% }
 
-- символ интеграла (\\int) имеет пределы интегрирования, задаваемые через ^ и _
-- определена новая команда \\diff и используется для корректного отображения диференциала
-- окружение equation автоматически добавляет нумерацию формулы
+![Управление размером graph2.pdf](image04/image_04.png){ width=70% }
 
-![math2.tex](image03/image_03.png){ width=70% }
+![Обрезка материала graph2.pdf](image04/image_05.png){ width=70% }
 
-![math2.pdf](image03/image_04.png){ width=70% }
+### Making images float.
 
-### The amsmath package.
+Для демонстрации размещения изображений применялось окружение **figure** с разными параметрами. Здесь LaTeX самостоятельно подбирает оптимальное место для рисунка. Также были использованы другие спецификаторы: 
 
-Пакет **amsmath** предоставляет расширенные возможности для работы с формулами:
+- h: Здесь (если возможно)
+- t: Верхняя часть страницы
+- b: Нижняя часть страницы 
+- p: Специальная страница только для плавающих элементов
 
-- окружение align* выравнивает уравнение по символу &
-- команда \\quad добавляет горизонтальный пробел
-- \\text{} вставляет обычный текст внутри формулы
-- \\binom{n}{k} создаёт биноминальные коэффициенты
-- существуют различные виды матриц: matrix (без скобок), pmatrix (в круглых скобках), bmatrix (в квадратных скобках)
+![graph3.tex](image04/image_06.png){ width=70% }
 
-![math3.tex](image03/image_05.png){ width=70% }
+![graph3.pdf](image04/image_07.png){ width=70% }
 
-![math3.pdf](image03/image_06.png){ width=70% }
+### Placing floats.
 
-### Fonts in math mode.
+В данном случае использовался параметр **[H]** из пакета **float**. В этом случае изображение вставляется строго в том месте, где прописана команда. Также я решил упорядочить файлы, поместив все графические файлы в подкаталог **figs** и указал изображение как **figs/example-image**.
 
-Показаны различные команды для изменения **шрифта**:
+![graph4.tex](image04/image_08.png){ width=70% }
 
-- \\mathrm: roman (upright)
-- \\mathit: italic spaced as ‘text’
-- \\mathbf: boldface
-- \\mathsf: sans serif
-- \\mathtt: monospaced (typewriter)
-- \\mathbb: double-struck (blackboard bold) (provided by the amsfonts package)
+![graph4.pdf](image04/image_09.png){ width=70% }
 
-![math4.tex](image03/image_07.png){ width=70% }
+### Other types of float.
 
-![math4.pdf](image03/image_08.png){ width=70% }
+Для демонстрации использовался пакет **trivfloat**, позволяющий создавать новые типы плавающих окружений. Это окружение работает аналогично **figure**, но с собственным названием и счётчиком.
 
-### Further amsmath alignments.
+![graph5.tex](image04/image_10.png){ width=70% }
 
-Показаны **дополнительные выравнивания** и **столбцы**:
+![graph5.pdf](image04/image_11.png){ width=70% }
 
-- gather выравнивает несколько строк по центру
-- multline используется для длинных формул, переносимых на несколько строк
-- align* создаёт таблицу уравнений, выравнивая их по знакам равенства
-- aligned используется внутри других формул для небольших систем уравнений
+### Cross-referencing.
 
-![math5.tex](image03/image_09.png){ width=70% }
+Для демонстрации работы перекрёстных ссылок использовались команды **\\label** и **\\ref**. После двойной компиляции ссылки корректно отображаются.
 
-![math5.pdf](image03/image_10.png){ width=70% }
+![graph6.tex](image04/image_12.png){ width=70% }
 
-### Bold Math.
+![Первая компиляция graph6.pdf](image04/image_13.png){ width=70% }
 
-**Жирный** математический шрифт:
+![Вторая компиляция graph6.pdf](image04/image_14.png){ width=70% }
 
-- \\boldmath делает всю формулу жирной
-- \\mathbf{} делает жирными только латинские буквы
-- \\bm{} позволяет выделять жирными любые символы, включая греческие
+### Making cross-references into links.
 
-![math6.tex](image03/image_11.png){ width=70% }
+Мы можем превратить перекрёстные ссылки в гиперссылки с помощью пакет **hyperref**. Опять же после двойной компиляции ссылки корректно отображаются.
 
-![math6.pdf](image03/image_12.png){ width=70% }
+![graph7.tex](image04/image_15.png){ width=70% }
 
-### Mathtools.
+![Первая компиляция graph7.pdf](image04/image_16.png){ width=70% }
 
-Пакет **mathtools** расширяет возможности ansmath. Например, окружение pmatrix* с параметром [r] выравнивает элементы по правому краю.
-
-![math7.tex](image03/image_13.png){ width=70% }
-
-![math7.pdf](image03/image_14.png){ width=70% }
-
-### Unicode Math.
-
-В данном разделе показано использование пакета **unicode-math** для работы с OpenType шрифтами:
-
-- пакет позволяет использовать современные математические шрифты
-- команды \\setmainfont и \\setmathfont задают основной и математический шрифты документа
-- используются греческие буквы (\\alpha, \\beta) и различные начертания: \\symbf{A} - жирный, \\symscr{A} - рукописный
-
-![math8.tex](image03/image_15.png){ width=70% }
-
-![math8s.pdf](image03/image_16.png){ width=70% }
+![Вторая компиляция graph7.pdf](image04/image_17.png){ width=70% }
 
 # Выводы
 
-Я изучил основные принципы математического набора в LaTeX, включая использование различных пакетов, режимов, шрифтов и символов.
+Я изучил возможности вставки, изменения и размещения графических изображений в LaTeX, а также освоил работу с плавающими объектами, подписями и перекрёстными ссылками.
