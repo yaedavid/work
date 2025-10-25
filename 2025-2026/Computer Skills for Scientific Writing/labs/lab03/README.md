@@ -8,7 +8,7 @@
 ## Подготовка презентации 3: [vkvideo](https://vkvideo.ru/video-60844198_456239027?list=ln-LITiZng7d57NIPM3i6)
 ## Защита презентации 3: [vkvideo](https://vkvideo.ru/video-60844198_456239028?list=ln-KxSDcNqiTpc8pZ6dzK)
 
-## Лабораторная работа 3: [платформа]()
-## Подготовка отчёта 3: [платформа]()
-## Подготовка презентации 3: [платформа]()
-## Защита презентации 3: [платформа]()
+## Лабораторная работа 3: [платформа](https://plvideo.ru/watch?v=YJ0Xy_yV5gzo)
+## Подготовка отчёта 3: [платформа](https://plvideo.ru/watch?v=RN81sFkxxQbI)
+## Подготовка презентации 3: [платформа](https://plvideo.ru/watch?v=l7VQ1FaXpjLX)
+## Защита презентации 3: [платформа](https://plvideo.ru/watch?v=zJ3if5Q7aOjm)
