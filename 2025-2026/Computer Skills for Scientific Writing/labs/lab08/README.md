@@ -7,5 +7,3 @@
 ## Подготовка отчёта 8: [vkvideo](https://vkvideo.ru/video-60844198_456239046?list=ln-T0tH8NH29JVsHrczYq)
 ## Подготовка презентации 8: [vkvideo](https://vkvideo.ru/video-60844198_456239047?list=ln-HZFUJLz9YWIPmypbLP)
 ## Защита лабораторной работы 8: [vkvideo](https://vkvideo.ru/video-60844198_456239048?list=ln-GuSkTCsCMCTtTezIzo)
-
-
