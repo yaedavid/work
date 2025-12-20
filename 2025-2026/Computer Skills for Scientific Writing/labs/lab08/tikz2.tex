@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{tikz} 
+\begin{document}
+
+\begin{tikzpicture}[scale=3]
+\draw (0,0) node {hello} -- (1,1) node {world};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=3]
+\draw (0,0) -- (1,1) node[midway]{A} node[pos=0.75,above]{B} node[right]{C};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=3]
+\draw (0,0) to node[midway]{A} node[pos=0.75, above]{B} (1,1) node[right]{C};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=3]
+\draw (0,0) node[circle, draw]{$\sum_{i=1}^{n}n^2$} -- (1,1) node[rectangle,draw]{$\frac{1}{\sqrt{2}}$};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=3]
+  % define nodes
+  \node[circle,draw] (label1) at (0,0) {$\sum_{i=1}^{n}n^2$};
+  \node[rectangle,draw] (label2) at (1,1) {$\frac{1}{\sqrt{2}}$};
+  % draw the line
+  \draw (label1) -- (label2);
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=2]
+  % Define the nodes
+  \node[circle, draw] at (0,0) (a) {A};
+  \node[rectangle, fill] at (3,0) (b) {};
+  \node at (3,0.4) (blabel) {B};
+  \node[rectangle,rounded corners, draw] at (5,2) (c) {C};
+  % Draw the paths
+  \draw[->, green] (a) -- (b) node[midway, below,black]{2};
+  \draw[<->, blue] (a) to[out=45, in=135] (b);
+  \draw[-»,red] (b)--(c);
+  \draw[yellow,dotted,very thick] (b) |- (c);
+  \draw[<-,cyan] (b) -| (c);
+  \draw[thick,black] (a).. controls (1,5) .. (c) node[midway, above]{$\frac{1}{2}$};
+\end{tikzpicture}
+
+\end{document}
