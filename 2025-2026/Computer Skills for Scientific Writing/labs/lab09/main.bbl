@@ -1,0 +1,290 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{1}{article}{}
+      \name{author}{7}{}{%
+        {{hash=2188a3b8b9d413a96768c71166b87c47}{%
+           family={Kondratyeva},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9828e1febeab2995695364557eae285b}{%
+           family={Ivanova},
+           familyi={I\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=402ae4eb7c2f8ecb05b60a225adcb95b}{%
+           family={Begishev},
+           familyi={B\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=995e7698456b1fb4b3561fea92ab8cd1}{%
+           family={Markova},
+           familyi={M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=2661d577c9a1749cb113c4e0570707b7}{%
+           family={Mokrov},
+           familyi={M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=001419bbf698bc7a67a9035e98f387d4}{%
+           family={Gaidamaka},
+           familyi={G\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f380e53e5e0137326f0417e125da4e41}{%
+           family={Samouylov},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{1702f07230e15b7051000488b688b987}
+      \strng{fullhash}{1702f07230e15b7051000488b688b987}
+      \strng{bibnamehash}{1702f07230e15b7051000488b688b987}
+      \strng{authorbibnamehash}{1702f07230e15b7051000488b688b987}
+      \strng{authornamehash}{1702f07230e15b7051000488b688b987}
+      \strng{authorfullhash}{1702f07230e15b7051000488b688b987}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Future Internet}
+      \field{number}{2}
+      \field{title}{Characterization of Dynamic Blockage Probability in Industrial Millimeter Wave 5G Deployments}
+      \field{volume}{14}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 20}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.3390/fi14020062
+      \endverb
+    \endentry
+    \entry{2}{report}{}
+      \name{author}{1}{}{%
+        {{hash=49952770ed51bcb32792566644a0032e}{%
+           family={{3GPP}},
+           familyi={3\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {3rd Generation Partnership Project}%
+      }
+      \strng{namehash}{49952770ed51bcb32792566644a0032e}
+      \strng{fullhash}{49952770ed51bcb32792566644a0032e}
+      \strng{bibnamehash}{49952770ed51bcb32792566644a0032e}
+      \strng{authorbibnamehash}{49952770ed51bcb32792566644a0032e}
+      \strng{authornamehash}{49952770ed51bcb32792566644a0032e}
+      \strng{authorfullhash}{49952770ed51bcb32792566644a0032e}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Study on Channel Model for Frequencies from 0.5 to 100 GHz}
+      \field{type}{Technical Report TR 38.901}
+      \field{year}{2022}
+      \true{nocite}
+    \endentry
+    \entry{3}{article}{}
+      \name{author}{10}{}{%
+        {{hash=440e9e773a73cb4a06981f1c61549c17}{%
+           family={Rappaport},
+           familyi={R\bibinitperiod},
+           given={T.\bibnamedelimi S.},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=4b3c49b80af5e52e6c07ad982621dbe2}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b1a62cf88f6b4d3fcd2ae53f458a2b60}{%
+           family={Mayzus},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a1563641bc9c7a4a1079914b6965e325}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f4918a37690c62e6934dd2c22d22d0dd}{%
+           family={Azar},
+           familyi={A\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=33b4ceeaa068e0ff0791079d2b905b6d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=04eb33be9e77534c3502608239143d6d}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={G.\bibnamedelimi N.},
+           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=311325e0540c92eb5321147d22b6304e}{%
+           family={Schulz},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=f7742502f0f790b549eec2dd75843896}{%
+           family={Samimi},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e5659f6d6a861c254c6552f4b2ad0b97}{%
+           family={Gutierrez},
+           familyi={G\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b53854bc181b0587e139e24ec2f1daa}
+      \strng{fullhash}{5b53854bc181b0587e139e24ec2f1daa}
+      \strng{bibnamehash}{5b53854bc181b0587e139e24ec2f1daa}
+      \strng{authorbibnamehash}{5b53854bc181b0587e139e24ec2f1daa}
+      \strng{authornamehash}{5b53854bc181b0587e139e24ec2f1daa}
+      \strng{authorfullhash}{5b53854bc181b0587e139e24ec2f1daa}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Millimeter Wave Mobile Communications for 5G Cellular: It Will Work!}
+      \field{volume}{1}
+      \field{year}{2013}
+      \true{nocite}
+      \field{pages}{335\bibrangedash 349}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2013.2260813
+      \endverb
+    \endentry
+    \entry{4}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2f5b8d3d6c9bffed9427183d26bece6d}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=ba9a32fba6295e773ac327dcbd8a3d5e}{%
+           family={Heath},
+           familyi={H\bibinitperiod},
+           given={R.\bibnamedelimi W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{3444b3a5ab86eb46580c1fa3d180fbb1}
+      \strng{fullhash}{3444b3a5ab86eb46580c1fa3d180fbb1}
+      \strng{bibnamehash}{3444b3a5ab86eb46580c1fa3d180fbb1}
+      \strng{authorbibnamehash}{3444b3a5ab86eb46580c1fa3d180fbb1}
+      \strng{authornamehash}{3444b3a5ab86eb46580c1fa3d180fbb1}
+      \strng{authorfullhash}{3444b3a5ab86eb46580c1fa3d180fbb1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Wireless Communications}
+      \field{number}{2}
+      \field{title}{Coverage and Rate Analysis for Millimeter-Wave Cellular Networks}
+      \field{volume}{14}
+      \field{year}{2015}
+      \true{nocite}
+      \field{pages}{1100\bibrangedash 1114}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/TWC.2014.2360195
+      \endverb
+    \endentry
+    \entry{5}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4000160bd08cf8eda38ea74163cab988}{%
+           family={Andrews},
+           familyi={A\bibinitperiod},
+           given={J.\bibnamedelimi G.},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=6a1fd43ca670574c94280565c12b9b4a}{%
+           family={Baccelli},
+           familyi={B\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ababacaa707770ec7cc0ebc6a9f0737a}{%
+           family={Ganti},
+           familyi={G\bibinitperiod},
+           given={R.\bibnamedelimi K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{176e314ed0c0bd5534b56d63a55aa913}
+      \strng{fullhash}{176e314ed0c0bd5534b56d63a55aa913}
+      \strng{bibnamehash}{176e314ed0c0bd5534b56d63a55aa913}
+      \strng{authorbibnamehash}{176e314ed0c0bd5534b56d63a55aa913}
+      \strng{authornamehash}{176e314ed0c0bd5534b56d63a55aa913}
+      \strng{authorfullhash}{176e314ed0c0bd5534b56d63a55aa913}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Communications}
+      \field{number}{11}
+      \field{title}{A Tractable Approach to Coverage and Rate in Cellular Networks}
+      \field{volume}{59}
+      \field{year}{2011}
+      \true{nocite}
+      \field{pages}{3122\bibrangedash 3134}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/TCOMM.2011.100411.100541
+      \endverb
+    \endentry
+    \entry{6}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=17541c65107086b7d7dd596d7ad81405}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a3be5ea6b470ac63fe702e54e17ed48c}{%
+           family={Guestrin},
+           familyi={G\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{504b0676eab5f1fea28621d004e40d9a}
+      \strng{fullhash}{504b0676eab5f1fea28621d004e40d9a}
+      \strng{bibnamehash}{504b0676eab5f1fea28621d004e40d9a}
+      \strng{authorbibnamehash}{504b0676eab5f1fea28621d004e40d9a}
+      \strng{authornamehash}{504b0676eab5f1fea28621d004e40d9a}
+      \strng{authorfullhash}{504b0676eab5f1fea28621d004e40d9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD)}
+      \field{title}{XGBoost: A Scalable Tree Boosting System}
+      \field{year}{2016}
+      \true{nocite}
+      \field{pages}{785\bibrangedash 794}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/2939672.2939785
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.10.11)  21 FEB 2026 18:18
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.10.11)  21 FEB 2026 20:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1289,10 +1289,6 @@ Package hyperref Info: Link coloring ON on input line 23.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
 (scrartcl)           because of handling of possible bookmark level gaps.
@@ -1301,6 +1297,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
 (scrartcl)           before \begin{document} on input line 23.
+
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 
@@ -1384,9 +1381,8 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-
-No file main.bbl.
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 23.
 Package biblatex Info: Reference segment=0 on input line 23.
 *geometry* driver: auto-detecting
@@ -1521,6 +1517,13 @@ Package hyperref Warning: Ignoring empty anchor on input line 91.
 
 Package hyperref Warning: Ignoring empty anchor on input line 91.
 
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-TU-empty.cfg
+File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
+ndard glyph set (RS)
+)
+
+Package hyperref Warning: Ignoring empty anchor on input line 91.
+
 File: doclicense-CC-by-88x31.pdf Graphic file (type pdf)
 <use doclicense-CC-by-88x31.pdf>
 
@@ -1529,43 +1532,21 @@ Overfull \hbox (4.5pt too wide) in paragraph at lines 91--91
  []
 
 
-LaTeX Warning: Citation 'Kondratyeva2022' on page 1 undefined on input line 99.
-
+Underfull \hbox (badness 1152) in paragraph at lines 99--101
+[]\TU/CMUSerif(1)/m/n/10.95 В работе [[][]1[][]] предложена аналитическая модел
+ь вероятности LoS-блокировки для
+ []
 
 [1
 
-]
-
-LaTeX Warning: Citation 'Kondratyeva2022' on page 2 undefined on input line 293
-.
-
-[2]
-
-LaTeX Warning: Citation 'Kondratyeva2022' on page 3 undefined on input line 299
-.
-
+] [2]
 File: in_domain.png Graphic file (type bmp)
 <in_domain.png>
 File: ood_test.png Graphic file (type bmp)
 <ood_test.png>
-
-LaTeX Warning: Citation 'Kondratyeva2022' on page 3 undefined on input line 360
-.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
-[]\TU/CMUSerif(1)/m/n/10.95 Таким образом, ML-подход расширяет аналитическую мо
-дель из рабо-
- []
-
-[3]
-
-LaTeX Warning: Empty bibliography on input line 376.
-
-(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
+ [3] (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
-)
-(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-utf32be.def
+) (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-utf32be.def
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 ) [4]
 (./main.aux)
@@ -1573,31 +1554,19 @@ File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35355 strings out of 474878
- 727835 string characters out of 5762515
+ 35454 strings out of 474878
+ 730687 string characters out of 5762515
  1940627 words of memory out of 5000000
- 56854 multiletter control sequences out of 15000+600000
- 568362 words of font info for 137 fonts, out of 8000000 for 9000
+ 56942 multiletter control sequences out of 15000+600000
+ 568394 words of font info for 141 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 122i,21n,131p,10920b,32861s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 122i,21n,131p,10920b,32857s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (4 pages).
