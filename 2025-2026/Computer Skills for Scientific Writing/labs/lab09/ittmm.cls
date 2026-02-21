@@ -2990,7 +2990,7 @@ intitle=true,%
 
 
 \setmainfont[Ligatures=TeX,Scale=MatchLowercase]{CMU Serif}
-\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{CMU Sans Serif}
+\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{CMU sans Serif}
 \setmonofont[Scale=MatchLowercase]{CMU Typewriter Text}
 
 % CMU Serif
