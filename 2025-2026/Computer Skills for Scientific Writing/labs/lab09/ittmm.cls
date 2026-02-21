@@ -2989,24 +2989,46 @@ intitle=true,%
 % }
 
 
-\setmainfont[Ligatures=TeX,Scale=MatchLowercase]{CMU Serif}
-\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{CMU sans Serif}
-\setmonofont[Scale=MatchLowercase]{CMU Typewriter Text}
+% \setmainfont[Ligatures=TeX,Scale=MatchLowercase]{CMU Serif}
+% \setsansfont[Ligatures=TeX,Scale=MatchLowercase]{CMU sans Serif}
+% \setmonofont[Scale=MatchLowercase]{CMU Typewriter Text}
+
+\setmainfont[
+  Path=/usr/share/fonts/truetype/cmu/,
+  UprightFont=cmunrm.ttf,
+  ItalicFont=cmunti.ttf,
+  BoldFont=cmunbx.ttf,
+  BoldItalicFont=cmunbi.ttf
+]{CMU Serif}
+
+\setsansfont[
+  Path=/usr/share/fonts/truetype/cmu/,
+  UprightFont=cmunss.ttf,
+  ItalicFont=cmunsi.ttf,
+  BoldFont=cmunsx.ttf 
+]{CMU Sans Serif}
+
+\setmonofont[
+  Path=/usr/share/fonts/truetype/cmu/,
+  UprightFont=cmuntt.ttf,
+  ItalicFont=cmunit.ttf,
+  BoldFont=cmuntb.ttf
+]{CMU Typewriter Text}
 
 % CMU Serif
-\newfontfamily\cyrillicfont%
-[Script=Cyrillic,Ligatures=TeX,Scale=MatchLowercase]%
-{CMU Serif}
+% \newfontfamily\cyrillicfont%
+% [Script=Cyrillic,Ligatures=TeX,Scale=MatchLowercase]%
+% {CMU Serif}
 
 % CMU Sans Serif
-\newfontfamily\cyrillicfontsf%
-[Script=Cyrillic,Ligatures=TeX,Scale=MatchLowercase]%
-{CMU Sans Serif}
+% \newfontfamily\cyrillicfontsf%
+% [Script=Cyrillic,Ligatures=TeX,Scale=MatchLowercase]%
+% {CMU Sans Serif}
 
 % CMU Typewriter Text
-\newfontfamily\cyrillicfonttt%
-[Script=Cyrillic,Scale=MatchLowercase]%
-{CMU Typewriter Text}
+% \newfontfamily\cyrillicfonttt%
+% [Script=Cyrillic,Scale=MatchLowercase]%
+% {CMU Typewriter Text}
 
 % \RequirePackage[RM={Scale=0.94},
 % SS={Scale=0.94},

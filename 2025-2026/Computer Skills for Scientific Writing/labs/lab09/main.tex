@@ -5,14 +5,17 @@
 \usepackage{polyglossia}
 \setdefaultlanguage{russian}
 
+\usepackage{float}
+\usepackage{subcaption}
+
 %%% One can fix some overfulls
 \sloppy
 
 %% Minted listings support
 %% Need pygment <http://pygments.org/> <http://pypi.python.org/pypi/Pygments>
-\usepackage{minted}
+% \usepackage{minted}
 %% auto break lines
-\setminted{breaklines=true}
+% \setminted{breaklines=true}
 
 \addbibresource{main.bib}
 
@@ -328,17 +331,17 @@ L=\sum_{i=1}^{N}\left(y_i-F(x_i)\right)^2
 
 Даже при смене режима плотности модель демонстрирует устойчивость.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \begin{subfigure}{0.48\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{figures/in_domain.png}
+    \includegraphics[width=\linewidth]{in_domain.png}
     \caption{In-domain тестирование}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.48\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{figures/ood_test.png}
+    \includegraphics[width=\linewidth]{ood_test.png}
     \caption{OOD тестирование ($\nu > 0.6$)}
 \end{subfigure}
 \caption{Сравнение предсказанных и аналитических значений вероятности LoS-блокировки. Красная линия соответствует идеальному случаю $y=x$.}
