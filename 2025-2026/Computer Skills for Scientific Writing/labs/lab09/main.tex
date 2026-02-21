@@ -1,0 +1,384 @@
+%%
+\documentclass[%
+]{ittmm}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+
+%%% One can fix some overfulls
+\sloppy
+
+%% Minted listings support
+%% Need pygment <http://pygments.org/> <http://pypi.python.org/pypi/Pygments>
+\usepackage{minted}
+%% auto break lines
+\setminted{breaklines=true}
+
+\addbibresource{main.bib}
+
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+%%
+%% Rights management information.
+%% CC-BY is default license.
+\copyrightyear{2025}
+\copyrightclause{Copyright for this paper by its authors.
+  Use permitted under Creative Commons License Attribution 4.0
+  International (CC BY 4.0).}
+
+%%
+%% This command is for the conference information
+\conference{Information and Telecommunication Technologies and Mathematical Modeling of High-Tech Systems 2026 (ITTMM 2026), Moscow, April 13--18, 2026}
+
+%%
+%% The "title" command
+\title{Градиентный бустинг для вероятностного прогнозирования LoS-блокировок в промышленных сценариях сетей 5G NR}
+
+%% \tnotemark[1]
+%% \tnotetext[1]{You can use this document as the template for preparing your publication. We recommend using the latest version of the ittmm style.}
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+\author{Д. А. Аветисян}[%
+%% orcid=0000-0000-0000-0000,
+email=yaedavid@ya.ru,
+%% url=https://yaedavid.github.io,
+]
+\cormark[1]
+
+\author{В. О. Бегишев}[%
+%% orcid=0000-0000-0000-0000,
+email=begishev-vo@rudn.ru,
+]
+%% \address[1]{RUDN University,
+%%   6 Miklukho-Maklaya St, Moscow, 117198, Russian Federation}
+%% \address[2]{Joint Institute for Nuclear Research,
+%%   6 Joliot-Curie St, Dubna, 141980, Russian Federation}
+
+%%% Footnotes
+\cortext[1]{Автор, отвечающий за публикацию.}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+    В работе рассматривается задача вероятностной оценки блокировки прямой видимости (LoS) в сетях 5G NR промышленного интернета вещей на основе методов машинного обучения. 
+    Предложена модель градиентного бустинга над решающими деревьями для прогнозирования вероятности возникновения LoS-блокировки с учётом геометрических, радиофизических и средовых параметров. 
+    Проведён численный анализ, показывающий эффективность предложенного подхода при моделировании сложной промышленной среды.
+\end{abstract}
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\begin{keywords}
+  5G NR \sep
+  промышленный интернет вещей \sep
+  LoS-блокировка \sep
+  машинное обучение \sep
+  Gradient Boosting \sep
+  вероятностное моделирование \sep
+  радиоканал \sep
+  mmWave
+\end{keywords}
+
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\section{Введение}
+
+Сети 5G NR миллиметрового диапазона (mmWave) рассматриваются как ключевая технологическая основа промышленного интернета вещей (IIoT). 
+Высокая направленность и широкая полоса частот позволяют обеспечить требования eMBB и URLLC-приложений в автоматизированных производственных системах. 
+Однако распространение сигнала в промышленной среде существенно осложняется явлением блокировки прямой видимости (Line-of-Sight, LoS), обусловленным наличием металлоконструкций, станков и подвижных механизмов.
+
+В работе~\cite{Kondratyeva2022} предложена аналитическая модель вероятности LoS-блокировки для промышленных mmWave-развертываний 5G NR. 
+Модель основана на сочетании фотограмметрического анализа прозрачности отдельных машин и стохастической геометрии (Manhattan Poisson Line Process), что позволяет получить выражения для вероятности блокировки в зависимости от плотности оборудования, геометрии размещения и высоты антенн.
+
+Несмотря на аналитическую строгость, вычисление вероятности блокировки требует интегрирования по пространственным координатам и распределению высот машин, что усложняет применение модели в задачах оптимизации и системного планирования. 
+В настоящей работе предлагается использовать методы машинного обучения для построения модели, аппроксимирующей аналитический вероятностный функционал.
+
+\section{Аналитическая модель LoS-блокировки}
+
+Рассматривается промышленное помещение, в котором производственные линии формируют стохастическую решётчатую структуру. Размещение линий моделируется Manhattan Poisson Line Process с интенсивностями $\lambda_x$ и $\lambda_y$ по осям.
+
+Вероятность блокировки LoS для устройства, расположенного в точке $(l_x, l_y)$ определяется выражением вида
+
+\begin{equation}
+p_B(l_x,l_y)=\exp\left(-\kappa \nu (\Lambda_x l_x + \Lambda_y l_y)\right),
+\end{equation}
+
+где $\nu$ - вероятность занятости ячейки машиной, $\kappa$ - прозрачность машины, $\Lambda_x, \Lambda_y$ - эффективные интенсивности пересечений LoS с потенциальными блокирующими элементами.
+
+В случае случайной высоты машин $H_B$ интенсивности задаются интегралами:
+
+\begin{equation}
+\Lambda_x=\int_0^{l_x} 
+\lambda_x 
+\left(
+1-F_{H_B}\big(f_{L,x}(x)\big)
+\right) 
+dx,
+\end{equation}
+
+где $f_{L,x}(x)$ - высота луча LoS: 
+
+\begin{equation}
+f_{L,x}(x)=h_A-\frac{(h_A-h_U)x}{l_x}.
+\end{equation}
+
+Аналогичное выражение записывается для оси $y$.
+
+Таким образом, итоговая вероятность блокировки представляет собой сложный нелинейный функционал от параметров среды:
+
+\begin{equation}
+p_B = f(d, h_A, h_U, \nu, \kappa, \lambda_x, \lambda_y, F_{H_B}).
+\end{equation}
+
+При многократных вычислениях (например, при оптимизации расположения базовых станций) непосредственное использование интегральной формы оказывается вычислительно затратным.
+
+\section{Постановка задачи машинного обучения}
+
+Целью является построение модели машинного обучения
+
+\begin{equation}
+\hat{f}(X) \approx p_B
+\end{equation}
+
+где вектор признаков
+
+\begin{equation}
+X = (d, h_A, h_U, \nu, \kappa, \lambda_x, \lambda_y, H_B)
+\end{equation}
+
+Задача формулируется как задача регрессии с ограниченным диапазоном выхода:
+
+\begin{equation}
+\hat{f}: \mathbb{R}^n \rightarrow [0,1]
+\end{equation}
+
+ML-модель должна воспроизводить поведение аналитической модели в широком диапазоне параметров.
+
+% \subsection{Title variants}
+
+% \mintinline{latex}{\title}
+% command have the below options:
+% \begin{itemize}
+% \item
+% \mintinline{latex}{title}
+% : Document title. This is default option.
+% \begin{minted}{latex}
+% \title[mode=title]{This is a title}
+% \end{minted}
+
+% You can just omit it, like as follows:
+% \begin{minted}{latex}
+% \title{This is a title}
+% \end{minted}
+
+% \item
+% \mintinline{latex}{alt}
+% : Alternate title.
+% \begin{minted}{latex}
+% \title[mode=alt]{This is a alternate title}
+% \end{minted}
+
+% \item
+% \mintinline{latex}{sub}
+% : Sub title.
+% \begin{minted}{latex}
+% \title[mode=sub]{This is a sub title}
+% \end{minted}
+% You can just use
+% \mintinline{latex}{\subtitle}
+%  command, as follows:
+% \begin{minted}{latex}
+% \subtitle{This is a sub title}
+% \end{minted}
+
+% \item
+% \mintinline{latex}{trans}
+% : Translated title.
+% \begin{minted}{latex}
+% \title[mode=trans]{This is a translated title}
+% \end{minted}
+
+% \item
+% \mintinline{latex}{transsub}
+% : Translated sub title.
+% \begin{minted}{latex}
+% \title[mode=transsub]{This is a translated sub title}
+% \end{minted}
+% \end{itemize}
+
+% \mintinline{latex}{\author}
+% command have the below options:
+% \begin{itemize}
+% \item
+% \mintinline{latex}{style}
+%  : Style of author name (chinese)
+% \item
+% \mintinline{latex}{prefix}
+%  : Prefix
+% \item
+% \mintinline{latex}{suffix}
+%  : Suffix
+% \item
+% \mintinline{latex}{degree}
+%  : Degree
+% \item
+% \mintinline{latex}{role}
+%  : Role
+% \item
+% \mintinline{latex}{orcid}
+%  : ORCID
+% \item
+% \mintinline{latex}{email}
+%  : E-mail
+% \item
+% \mintinline{latex}{url}
+%  : URL
+% \end{itemize}
+
+% Author names can have some kinds of marks and notes:
+% \begin{itemize}
+% \item affiliation mark:
+% \mintinline{latex}{\author[<num>]}
+% .
+% \end{itemize}
+
+% The author names and affiliations could be formatted in two ways:
+% \begin{enumerate}
+% \item Group the authors per affiliation.
+% \item Use an explicit mark to indicate the affiliations.
+% \end{enumerate}
+
+% Author block example:
+% \begin{minted}{latex}
+% \author[1,2]{Author Name}[%
+%     prefix=Prof.,
+%     degree=D.Sc.,
+%     role=Researcher,
+%     orcid=0000-0000-000-0000,
+%     email=name@example.com,
+%     url=https://name.example.com
+% ]
+
+% \address[1]{Affiliation #1}
+% \address[2]{Affiliation #2}
+% \end{minted}
+
+\section{Метод градиентного бустинга}
+
+В качестве аппроксиматора используется ансамблевая модель градиентного бустинга:
+
+\begin{equation}
+F_M(x)=\sum_{m=1}^{M}\gamma_m h_m(x)
+\end{equation}
+
+где $h_m(x)$ — решающие деревья.
+
+Минимизируется квадратичная функция потерь:
+
+\begin{equation}
+L=\sum_{i=1}^{N}\left(y_i-F(x_i)\right)^2
+\end{equation}
+
+Использован алгоритм Histogram-based Gradient Boosting, обеспечивающий высокую вычислительную эффективность при больших объёмах выборки.
+
+Градиентный бустинг рассматривается как модель аналитического функционала, полученного в работе~\cite{Kondratyeva2022}.
+
+\section{Численные эксперименты}
+
+\subsection{Генерация датасета}
+
+Датасет сформирован путём вычисления вероятности LoS-блокировки на основе аналитической модели из работы~\cite{Kondratyeva2022} при различных комбинациях параметров:
+
+\begin{itemize}
+  \item расстояние $d \in [5,100]$ м;
+  \item плотность занятости $\nu \in [0.1,\,0.9]$;
+  \item случайная высота машин;
+  \item число наблюдений — до $200\,000$.
+\end{itemize}
+
+\subsection{Результаты in-domain}
+
+Получены следующие метрики:
+
+\begin{itemize}
+  \item MAE $\approx 0.02$,
+  \item RMSE $\approx 0.03$,
+  \item $R^2 \approx 0.97$.
+\end{itemize}
+
+Модель точно аппроксимирует аналитический функционал.
+
+\subsection{Out-of-distribution анализ}
+
+Обучение проводилось при $\nu \le 0.6$, тестирование — при $\nu > 0.6$.
+
+Результаты:
+
+\begin{itemize}
+  \item MAE $\approx 0.05$,
+  \item RMSE $\approx 0.07$,
+  \item $R^2 \approx 0.88$.
+\end{itemize}
+
+Даже при смене режима плотности модель демонстрирует устойчивость.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{figures/in_domain.png}
+    \caption{In-domain тестирование}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{figures/ood_test.png}
+    \caption{OOD тестирование ($\nu > 0.6$)}
+\end{subfigure}
+\caption{Сравнение предсказанных и аналитических значений вероятности LoS-блокировки. Красная линия соответствует идеальному случаю $y=x$.}
+\label{fig:predictions}
+\end{figure}
+
+\section{Обсуждение}
+
+Предложенный подход:
+
+1. Существенно ускоряет вычисление вероятности блокировки по сравнению с интегральной формой.  
+2. Сохраняет физическую интерпретируемость.  
+3. Устойчив к изменению плотности оборудования.  
+4. Может использоваться в задачах оптимизации параметров сети.  
+
+Таким образом, ML-подход расширяет аналитическую модель из работы~\cite{Kondratyeva2022}, обеспечивая вычислительно эффективную аппроксимацию.
+
+\section{Заключение}
+
+В работе предложена модель градиентного бустинга для вероятностного прогнозирования LoS-блокировок в промышленных сценариях 5G NR. 
+Модель основана на аппроксимации аналитического стохастико-геометрического функционала, что обеспечивает сочетание физической корректности и вычислительной эффективности.
+
+В дальнейшем планируется:
+
+- учёт динамики подвижных механизмов,  
+- расширение модели на временные ряды,  
+- использование методов интерпретации (SHAP),  
+- применение к реальным измерениям.  
+
+%%
+%% Define the bibliography file to be used
+\printbibliography
+
+%%
+%% If your work has an appendix, this is the place to put it.
+\appendix
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
