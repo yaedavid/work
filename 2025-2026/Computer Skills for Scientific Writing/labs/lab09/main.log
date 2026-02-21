@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.10.11)  21 FEB 2026 20:31
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.10.11)  21 FEB 2026 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1544,11 +1544,13 @@ File: in_domain.png Graphic file (type bmp)
 <in_domain.png>
 File: ood_test.png Graphic file (type bmp)
 <ood_test.png>
- [3] (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
+ [3] [4]
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
-) (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-utf32be.def
+)
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-utf32be.def
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
-) [4]
+) [5]
 (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1569,4 +1571,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  122i,21n,131p,10920b,32857s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (4 pages).
+Output written on main.pdf (5 pages).
